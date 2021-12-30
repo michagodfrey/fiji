@@ -1,0 +1,25 @@
+/* =================================================
+            Base Element Styles & Classes
+==================================================== */
+
+body {
+  min-height: 100vh;
+}
+
+.gallery {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.image-container {
+  margin: 10px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
