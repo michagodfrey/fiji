@@ -5,6 +5,7 @@
     <title>Bob & Linda's Fiji Life</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/baguetteBox.min.css" rel="stylesheet">
     <script src="js/baguetteBox.min.js" defer></script>
@@ -12,10 +13,95 @@
   </head>
 
   <body>
+    <header>
+      <h1>Title goes here</h1>
+      <h3>Subtile or caption goes here</h3>
+    </header>
+
+    <div class="intro">
+      <img class="main-image" src="photos/bob-linda.jpg" alt="Bob and Linda in backyard on Savusavu">
+      <p class="intro-text">
+        Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <img class="second-image" src="photos/rainbow-intro.jpg" alt="rainbow">
+    </div>
+
+    <div class="subtitle">
+      <h2>Location</h2>
+    </div>
+
+    <div class="map-container">
+      <h3 class="map-title">Savusavu, Fiji</h3>
+      <div class="gmap-canvas">
+        <iframe class="responsive-iframe" id="gmap_canvas" src="https://maps.google.com/maps?q=savusavu&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+      <span class="citation">Map provided by: <a class="link" href="https://www.embedgooglemap.net" target="_blank">embedgooglemap.net</a></span>
+    </div>
+
+    <!-- property  -->
+    <div class="subtitle">
+      <h2>The Property</h2>
+    </div>
+
+    <div class="section plantation">
+      <div class="text-container">
+        <h4>In the jungle on our land freeing a plantain banana plant from the encroaching casava plants.</h4>
+        <p class="section-text">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <img class="photo" src="photos/plantation.jpg" alt="Bob with plantain and casava plants">
+    </div>
+
+    <div class="section flower">
+      <div class="text-container">
+        <h4>A flower from our property. Part of the ginger family.</h4>
+        <p class="section-text">
+          Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <img class="photo" src="photos/ginger-plant.jpg" alt="Ginger flower">
+    </div>
+
+    <!-- gallery -->
+    <div class="subtitle">
+      <h2>Gallery</h2>
+    </div>
+
     <div class="gallery">
+
       <div class="image-container">
-        <a href="photos/bob-linda.jpg" data-caption="Very first day at our home in Savusavu. Backdrop is the view from our front verandah.">
-          <img class="image" src="photos/thumbnails/thumb-bob-linda.jpg" alt="Bob and Linda in backyard on Savusavu">
+        <a href="photos/main-street.jpg" data-caption="A view overlooking Savusavu Bay & the main street of town.">
+          <img class="image" src="photos/thumbnails/thumb-main-street.jpg" alt="main street Savusavu">
+        </a>
+      </div>
+
+      <div class="image-container">
+        <a href="photos/copra-shed.jpg" data-caption="Copra Shed by the marina and local yacht club. There is a coffee shop, restaurant, beer garden and various shops inside. Sometimes there is live music playing.">
+          <img class="image" src="photos/thumbnails/thumb-copra-shed.jpg" alt="Marina and copra shed">
+        </a>
+      </div>
+
+      <div class="image-container">
+        <a href="photos/savusavu-bay.jpg" data-caption="A beach on Savusavu Bay">
+          <img class="image" src="photos/thumbnails/thumb-savusavu-bay.jpg" alt="Savusavu bay">
+        </a>
+      </div>
+
+      <div class="image-container">
+        <a href="photos/waterfront.jpg" data-caption="The waterfront at the local council carpark in Savusavu.">
+          <img class="image" src="photos/thumbnails/thumb-waterfront.jpg" alt="waterfront">
+        </a>
+      </div>
+
+      <div class="image-container">
+        <a href="photos/rainbow.jpg" data-caption="A rainbow taken from our front porch.">
+          <img class="image" src="photos/thumbnails/thumb-rainbow.jpg" alt="A rainbow taken from our front porch.">
         </a>
       </div>
 
@@ -32,53 +118,16 @@
       </div>
 
       <div class="image-container">
-        <a href="photos/copra-shed.jpg" data-caption="Copra Shed by the marina and local yacht club. There is a coffee shop, restaurant, beer garden and various shops inside. Sometimes there is live music playing.">
-          <img class="image" src="photos/thumbnails/thumb-copra-shed.jpg" alt="Marina and copra shed">
-        </a>
-      </div>
-
-      <div class="image-container">
-        <a href="photos/ginger-plant.jpg" data-caption="A flower Bob found on our property. Part of the ginger family.">
-          <img class="image" src="photos/thumbnails/thumb-ginger-plant.jpg" alt="Ginger flower">
-        </a>
-      </div>
-
-      <div class="image-container">
-        <a href="photos/beach.jpg" data-caption="The beach at our friend's place.">
+        <a href="photos/beach.jpg" data-caption="And the same beach from the other direction.">
           <img class="image" src="photos/thumbnails/thumb-beach.jpg" alt="beach">
         </a>
       </div>
 
-      <div class="image-container">
-        <a href="photos/main-street.jpg" data-caption="A view overlooking Savusavu Bay & the main street of town.">
-          <img class="image" src="photos/thumbnails/thumb-main-street.jpg" alt="main street Savusavu">
-        </a>
-      </div>
-
-      <div class="image-container">
-        <a href="photos/plantation.jpg" data-caption="Bob in the jungle on our land freeing a plantain banana plant from the encroaching casava plants.">
-          <img class="image" src="photos/thumbnails/thumb-plantation.jpg" alt="Bob with plantain and casava plants">
-        </a>
-      </div>
-
-      <div class="image-container">
-        <a href="photos/rainbow.jpg" data-caption="Bob in the jungle on our land freeing a plantain banana plant from the encroaching casava plants.">
-          <img class="image" src="photos/thumbnails/thumb-rainbow.jpg" alt="A rainbow taken from our front porch.">
-        </a>
-      </div>
-
-      <div class="image-container">
-        <a href="photos/savusavu-bay.jpg" data-caption="A beach on Savusavu Bay">
-          <img class="image" src="photos/thumbnails/thumb-savusavu-bay.jpg" alt="Savusavu bay">
-        </a>
-      </div>
-
-      <div class="image-container">
-        <a href="photos/waterfront.jpg" data-caption="The waterfront at the local council carpark in Savusavu.">
-          <img class="image" src="photos/thumbnails/thumb-waterfront.jpg" alt="waterfront">
-        </a>
-      </div>
-
     </div>
+    <!-- end gallery -->
+
+    <footer>
+      <a href="#">Back to top</a>
+    </footer>
   </body>
 </html>
