@@ -187,11 +187,11 @@ a {
     margin: 0;
   }
 
-  .flower {
+  .right {
     flex-direction: row;
   }
 
-  .plantation {
+  .left {
     flex-direction: row-reverse;
   }
 
