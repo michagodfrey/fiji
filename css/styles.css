@@ -29,6 +29,13 @@ footer {
   box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.5);
 }
 
+/* to keep footer fixed to bottom on gallery pages */
+.bottom-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 h1 {
   margin-top: 0;
   padding-top: 18.72px;
@@ -61,6 +68,14 @@ a {
   text-align: center;
   margin-top: 50px;
   text-decoration: underline;
+}
+
+/* add on classes */
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* intro section */
@@ -153,6 +168,17 @@ a {
 }
 
 /* photo gallery styles */
+.gallery-links {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.thumbnail {
+  margin: 5px;
+  max-height: 180px;
+}
+
 .gallery {
   max-width: 1300px;
   margin: 0 auto;
@@ -164,11 +190,51 @@ a {
 
 .image-container {
   padding: 5px;
+  display: inline-block;
 }
 
 .image {
   width: 100%;
   height: auto;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.back-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+
+/* back button, generated with https://www.css3buttongenerator.com/ */
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }
 
 /* media queries */
