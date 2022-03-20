@@ -10,29 +10,44 @@ header {
   text-align: center;
   color: #fff;
   background: #8C158C;
-  background: -webkit-linear-gradient(bottom, #59A4D4, #8C158C);
-  background: -moz-linear-gradient(bottom, #59A4D4, #8C158C);
+  /* background: -webkit-linear-gradient(bottom, #59A4D4, #8C158C);
+  background: -moz-linear-gradient(bottom, #59A4D4, #8C158C); */
   background: linear-gradient(to top, #59A4D4, #8C158C);
-  -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.5);
+  /* -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.5); */
   box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.5);
 }
 
+main {
+  margin-bottom: 100px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  padding: 10px;
+  font-weight: bold;
+}
+
 footer {
-  margin-top: 40px;
+  margin-top: 50px;
   padding: 20px;
   text-align: center;
   background: #8C158C;
-  background: -webkit-linear-gradient(bottom, #8C158C, #59A4D4);
-  background: -moz-linear-gradient(bottom, #8C158C, #59A4D4);
+  /* background: -webkit-linear-gradient(bottom, #8C158C, #59A4D4);
+  background: -moz-linear-gradient(bottom, #8C158C, #59A4D4); */
   background: linear-gradient(to top, #8C158C, #59A4D4);
-  -webkit-box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.5);
+  /* -webkit-box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.5); */
   box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.5);
 }
 
 /* to keep footer fixed to bottom on gallery pages */
-.bottom-fixed {
+.fixed {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -57,6 +72,12 @@ h4 {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+nav a:hover, footer a:hover {
+  /* adaped from : https://html-css-js.com/css/generator/text-shadow/ 'neon' */
+  color: #FFFFFF;
+text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #FFF, 0 0 55px #FFF, 0 0 75px #FFF;
 }
 
 .link {
@@ -152,11 +173,21 @@ a {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.text-container {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
 }
 
 .section-text {
   padding: 10px;
+
 }
 
 .photo {
@@ -175,6 +206,15 @@ a {
   flex-flow: row wrap;
 }
 
+.gallery-container {
+  margin: 1rem;
+}
+
+.gallery-container h3 {
+ margin: 1rem 0 0 1rem;
+ padding: 0;
+}
+
 .slide {
   position: relative;
 }
@@ -188,12 +228,14 @@ a {
   overflow: hidden;
   width: 300px;
   margin: 5px;
+  /* padding: 5px; */
   height:0;
   transition: .5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  text-align: center;
+  font-size: 1.5rem
   font-weight: bold;
 }
 
@@ -230,7 +272,7 @@ a {
 }
 
 .wrapper {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -244,10 +286,10 @@ a {
 
 .btn {
   background: #3498db;
-  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  /* background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
   background-image: -moz-linear-gradient(top, #3498db, #2980b9);
   background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9); */
   background-image: linear-gradient(to bottom, #3498db, #2980b9);
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
@@ -260,10 +302,10 @@ a {
 
 .btn:hover {
   background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  /* background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db); */
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
@@ -280,8 +322,17 @@ a {
       "main-img second-img";
   }
 
+  .subtitle {
+    margin-bottom: 3rem;
+  }
+
   .intro-text {
     margin: 0;
+    column-count: 2;
+  }
+
+  .gallery {
+    margin-top: 3rem;
   }
 
   .right {
