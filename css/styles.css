@@ -18,9 +18,8 @@ header {
 }
 
 main {
-  margin-bottom: 100px;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto 100px auto;
 }
 
 nav {
