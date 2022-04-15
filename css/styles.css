@@ -1,4 +1,4 @@
-/*  Base Element Styles & Classes */
+/*  Base Elements */
 body {
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
@@ -10,10 +10,10 @@ header {
   text-align: center;
   color: #fff;
   background: #8C158C;
-  /* background: -webkit-linear-gradient(bottom, #59A4D4, #8C158C);
-  background: -moz-linear-gradient(bottom, #59A4D4, #8C158C); */
+  background: -webkit-linear-gradient(bottom, #59A4D4, #8C158C);
+  background: -moz-linear-gradient(bottom, #59A4D4, #8C158C);
   background: linear-gradient(to top, #59A4D4, #8C158C);
-  /* -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.5); */
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.5);
   box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.5);
 }
 
@@ -30,25 +30,43 @@ nav {
   font-weight: bold;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+div {
+  margin: 0 auto;
+}
+
 footer {
   margin-top: 50px;
   padding: 20px;
   text-align: center;
   background: #8C158C;
-  /* background: -webkit-linear-gradient(bottom, #8C158C, #59A4D4);
-  background: -moz-linear-gradient(bottom, #8C158C, #59A4D4); */
+  background: -webkit-linear-gradient(bottom, #8C158C, #59A4D4);
+  background: -moz-linear-gradient(bottom, #8C158C, #59A4D4);
   background: linear-gradient(to top, #8C158C, #59A4D4);
-  /* -webkit-box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.5); */
+  -webkit-box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.5);
   box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.5);
 }
 
 /* to keep footer fixed to bottom on gallery pages */
-.fixed {
+.footer--fixed {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
 }
+
+nav a:hover,
+footer a:hover {
+  /* adaped from : https://html-css-js.com/css/generator/text-shadow/ 'neon' */
+  color: #FFFFFF;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #FFF, 0 0 55px #FFF, 0 0 75px #FFF;
+}
+
+/* text classes */
 
 h1 {
   margin-top: 0;
@@ -73,59 +91,119 @@ a {
   text-decoration: none;
 }
 
-nav a:hover, footer a:hover {
-  /* adaped from : https://html-css-js.com/css/generator/text-shadow/ 'neon' */
-  color: #FFFFFF;
-text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #FFF, 0 0 55px #FFF, 0 0 75px #FFF;
-}
-
 .link {
   text-decoration: underline;
   color: blue;
 }
 
-.subtitle {
+.text {
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .two-cols {
+    margin: 0;
+    column-count: 2;
+  }
+}
+
+.text-container {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  margin: auto;
+}
+
+
+/* div classes */
+
+.section {
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section--subheading {
   margin-top: 50px;
   text-decoration: underline;
 }
 
-/* add on classes */
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.section--gallery {
+  justify-content: center;
+  flex-flow: row wrap;
 }
 
-/* intro section */
+@media (min-width: 768px) {
 
-.intro {
-  max-width: 1200px;
+  .section--intro {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+      "main-img text"
+      "main-img second-img";
+  }
+
+  .section--subheading {
+    margin-bottom: 3rem;
+  }
+
+  .section--gallery {
+    margin-top: 3rem;
+  }
+  
+  .right {
+    flex-direction: row;
+  }
+  
+  .left {
+    flex-direction: row-reverse;
+  }
+
+}
+
+.gallery-container {
+  margin: 1rem;
+}
+
+.gallery-container h3 {
+  margin: 1rem 0 0 1rem;
+  padding: 0;
+}
+
+.image-container {
+  padding: 5px;
+  display: inline-block;
+}
+
+.back-btn-container {
   display: flex;
-  flex-direction: column;
-  margin: 0 auto 50px auto;
-  align-items: center;
+  justify-content: flex-end;
+  margin-right: 40px;
 }
 
-.main-image {
-  width: 100%;
-  height: auto;
+/* image classes */
+
+.image--main {
   max-width: 408.75px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 14px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 14px,
+  rgba(0, 0, 0, 0.22) 0px 5px 5px;
   grid-area: main-img;
 }
 
-.intro-text {
-  padding: 10px;
-  grid-area: text;
+.image--second {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 14px,
+  rgba(0, 0, 0, 0.22) 0px 5px 5px;
+  grid-area: second-img;
 }
 
-.second-image {
-  width: 100%;
-  height: auto;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 14px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
-  grid-area: second-img;
+.image--photo {
+  max-width: 384px;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 14px,
+  rgba(0, 0, 0, 0.22) 0px 5px 5px;
 }
 
 /* Embedded map styles */
@@ -166,53 +244,7 @@ text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 30px
   float: right;
 }
 
-/*  the property styles */
-.section {
-  margin: 0 auto;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-}
-
-.text-container {
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: auto;
-}
-
-.section-text {
-  padding: 10px;
-
-}
-
-.photo {
-  width: 100%;
-  height: auto;
-  max-width: 384px;
-  margin: 0 auto;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 14px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
-}
-
-/* photo gallery links styles */
-
-.gallery-links {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-}
-
-.gallery-container {
-  margin: 1rem;
-}
-
-.gallery-container h3 {
- margin: 1rem 0 0 1rem;
- padding: 0;
-}
+/* gallery overlay dropdown styles */
 
 .slide {
   position: relative;
@@ -227,14 +259,13 @@ text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 30px
   overflow: hidden;
   width: 300px;
   margin: 5px;
-  /* padding: 5px; */
   height:0;
   transition: .5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 1.5rem
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -249,46 +280,14 @@ text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 30px
   max-height: 180px;
 }
 
-/* photo gallery pages styles */
-
-.gallery {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 10px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-.image-container {
-  padding: 5px;
-  display: inline-block;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-}
-
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.back-btn-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 40px;
-}
-
 /* back button, generated with https://www.css3buttongenerator.com/ */
 
 .btn {
   background: #3498db;
-  /* background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
   background-image: -moz-linear-gradient(top, #3498db, #2980b9);
   background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-  background-image: -o-linear-gradient(top, #3498db, #2980b9); */
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
   background-image: linear-gradient(to bottom, #3498db, #2980b9);
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
@@ -301,45 +300,10 @@ text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 30px
 
 .btn:hover {
   background: #3cb0fd;
-  /* background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db); */
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
-}
-
-/* media queries */
-
-@media (min-width: 768px) {
-
-  .intro {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-areas:
-      "main-img text"
-      "main-img second-img";
-  }
-
-  .subtitle {
-    margin-bottom: 3rem;
-  }
-
-  .intro-text {
-    margin: 0;
-    column-count: 2;
-  }
-
-  .gallery {
-    margin-top: 3rem;
-  }
-
-  .right {
-    flex-direction: row;
-  }
-
-  .left {
-    flex-direction: row-reverse;
-  }
-
 }
