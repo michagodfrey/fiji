@@ -1,4 +1,7 @@
-/*  Base Elements */
+/* =================================================
+  base elements and styles
+==================================================== */
+
 body {
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
@@ -66,7 +69,9 @@ footer a:hover {
   text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #FFF, 0 0 55px #FFF, 0 0 75px #FFF;
 }
 
-/* text classes */
+/* =================================================
+  text styles
+==================================================== */
 
 h1 {
   margin-top: 0;
@@ -80,6 +85,11 @@ h2 {
 
 h3 {
   padding-bottom: 15px;
+}
+
+.gallery-container h3 {
+  margin: 1rem 0 0 1rem;
+  padding: 0;
 }
 
 h4 {
@@ -107,6 +117,10 @@ a {
   }
 }
 
+/* =================================================
+  div styles
+==================================================== */
+
 .text-container {
   max-width: 300px;
   display: flex;
@@ -115,8 +129,9 @@ a {
   margin: auto;
 }
 
-
-/* div classes */
+.thumbnail-container {
+  padding: 5px;
+}
 
 .section {
   margin: 0 auto;
@@ -164,18 +179,12 @@ a {
 
 }
 
-.gallery-container {
-  margin: 1rem;
-}
+/* center thumbnails in galleries */
 
-.gallery-container h3 {
-  margin: 1rem 0 0 1rem;
-  padding: 0;
-}
-
-.image-container {
-  padding: 5px;
-  display: inline-block;
+.center-content {
+  max-width: 940px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .back-btn-container {
@@ -184,7 +193,9 @@ a {
   margin-right: 40px;
 }
 
-/* image classes */
+/* =================================================
+  image styles
+==================================================== */
 
 .image--main {
   max-width: 408.75px;
@@ -206,7 +217,16 @@ a {
   rgba(0, 0, 0, 0.22) 0px 5px 5px;
 }
 
-/* Embedded map styles */
+.image-thumbnail {
+  max-height: 180px;
+}
+
+/* thumbnail and image classes to be sorted */
+
+/* =================================================
+  embedded map styles
+==================================================== */
+
 /* responsive style adapted from W3 Schools https://www.w3schools.com/howto/howto_css_responsive_iframes.asp */
 .map-container {
   display: block;
@@ -222,13 +242,13 @@ a {
   margin-bottom: 0;
 }
 
-.gmap-canvas {
+.map-canvas {
   position: relative;
   width: 100%;
   padding-top: 75%;
 }
 
-.responsive-iframe {
+.map-iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -239,26 +259,30 @@ a {
   border: none;
 }
 
-.citation {
+.map-citation {
   font-size: .75em;
   float: right;
 }
 
-/* gallery overlay dropdown styles */
+/* =================================================
+  slide overlay effect on gallery links
+==================================================== */
 
-.slide {
+.gallery-container {
+  margin: 1rem;
+}
+
+.gallery-slide {
   position: relative;
 }
 
-.overlay {
+.gallery-overlay {
   position: absolute;
   bottom: 100%;
   left: 0;
   right: 0;
   background-color: #000;
   overflow: hidden;
-  width: 300px;
-  margin: 5px;
   height:0;
   transition: .5s ease;
   display: flex;
@@ -269,16 +293,15 @@ a {
   font-weight: bold;
 }
 
-.slide:hover .overlay {
+.gallery-slide:hover .gallery-overlay {
   bottom: 0;
   height: 100%;
   opacity: .6;
 }
 
-.thumbnail {
-  margin: 5px;
-  max-height: 180px;
-}
+/* =================================================
+  button styles
+==================================================== */
 
 /* back button, generated with https://www.css3buttongenerator.com/ */
 

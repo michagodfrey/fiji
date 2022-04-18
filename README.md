@@ -8,7 +8,7 @@ This site is to showcase photos and blog posts of two expats in Fiji.
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./photos/screenshot.jpg)
 
 ### Built with
 
